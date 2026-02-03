@@ -1,27 +1,10 @@
-import pygame
-from src.settings import WIDTH, HEIGHT, FPS
+from src.game import Game
 
 
-def main():
-    pygame.init()
-    screen = pygame.display.set_mode((WIDTH, HEIGHT))
-    pygame.display.set_caption("Tacos vs Kebab")
-
-    clock = pygame.time.Clock()
-    running = True
-
-    while running:
-        clock.tick(FPS)
-
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                running = False
-
-        screen.fill((30, 30, 30))
-        pygame.display.flip()
-
-    pygame.quit()
+def main() -> None:
+    game = Game()
+    game.run()
 
 
-if __name__ == "__main__":
+if name == "main":
     main()
